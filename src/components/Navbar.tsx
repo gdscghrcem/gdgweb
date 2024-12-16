@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Code2 } from 'lucide-react';
 import { AuthButton } from './AuthButton';
 import { useAuthStore } from '../store/authStore';
@@ -7,8 +7,11 @@ import { useAuthStore } from '../store/authStore';
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { isAuthenticated } = useAuthStore();
+  const location = useLocation(); 
 
   const toggleMenu = () => setIsOpen(!isOpen);
+
+  const isActive = (path: string) => location.pathname === path;
 
   return (
     <nav className="bg-white shadow-lg fixed w-full z-50">
@@ -23,12 +26,54 @@ const Navbar = () => {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="text-gray-600 hover:text-blue-600">Home</Link>
-            <Link to="/about" className="text-gray-600 hover:text-blue-600">About Us</Link>
-            <Link to="/events" className="text-gray-600 hover:text-blue-600">Events</Link>
-            <Link to="/blog" className="text-gray-600 hover:text-blue-600">Blog</Link>
-            <Link to="/team" className="text-gray-600 hover:text-blue-600">Team</Link>
-            <Link to="/contact" className="text-gray-600 hover:text-blue-600">Contact</Link>
+            <Link
+              to="/"
+              className={`hover:text-blue-600 ${
+                isActive('/') ? 'text-blue-600 font-bold' : 'text-gray-600'
+              }`}
+            >
+              Home
+            </Link>
+            <Link
+              to="/about"
+              className={`hover:text-blue-600 ${
+                isActive('/about') ? 'text-blue-600 font-bold' : 'text-gray-600'
+              }`}
+            >
+              About Us
+            </Link>
+            <Link
+              to="/events"
+              className={`hover:text-blue-600 ${
+                isActive('/events') ? 'text-blue-600 font-bold' : 'text-gray-600'
+              }`}
+            >
+              Events
+            </Link>
+            <Link
+              to="/blog"
+              className={`hover:text-blue-600 ${
+                isActive('/blog') ? 'text-blue-600 font-bold' : 'text-gray-600'
+              }`}
+            >
+              Blog
+            </Link>
+            <Link
+              to="/team"
+              className={`hover:text-blue-600 ${
+                isActive('/team') ? 'text-blue-600 font-bold' : 'text-gray-600'
+              }`}
+            >
+              Team
+            </Link>
+            <Link
+              to="/contact"
+              className={`hover:text-blue-600 ${
+                isActive('/contact') ? 'text-blue-600 font-bold' : 'text-gray-600'
+              }`}
+            >
+              Contact
+            </Link>
             {isAuthenticated ? (
               <AuthButton />
             ) : (
@@ -51,12 +96,54 @@ const Navbar = () => {
       {isOpen && (
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <Link to="/" className="block px-3 py-2 text-gray-600 hover:text-blue-600">Home</Link>
-            <Link to="/about" className="block px-3 py-2 text-gray-600 hover:text-blue-600">About Us</Link>
-            <Link to="/events" className="block px-3 py-2 text-gray-600 hover:text-blue-600">Events</Link>
-            <Link to="/blog" className="block px-3 py-2 text-gray-600 hover:text-blue-600">Blog</Link>
-            <Link to="/team" className="block px-3 py-2 text-gray-600 hover:text-blue-600">Team</Link>
-            <Link to="/contact" className="block px-3 py-2 text-gray-600 hover:text-blue-600">Contact</Link>
+            <Link
+              to="/"
+              className={`block px-3 py-2 hover:text-blue-600 ${
+                isActive('/') ? 'text-blue-600 font-bold' : 'text-gray-600'
+              }`}
+            >
+              Home
+            </Link>
+            <Link
+              to="/about"
+              className={`block px-3 py-2 hover:text-blue-600 ${
+                isActive('/about') ? 'text-blue-600 font-bold' : 'text-gray-600'
+              }`}
+            >
+              About Us
+            </Link>
+            <Link
+              to="/events"
+              className={`block px-3 py-2 hover:text-blue-600 ${
+                isActive('/events') ? 'text-blue-600 font-bold' : 'text-gray-600'
+              }`}
+            >
+              Events
+            </Link>
+            <Link
+              to="/blog"
+              className={`block px-3 py-2 hover:text-blue-600 ${
+                isActive('/blog') ? 'text-blue-600 font-bold' : 'text-gray-600'
+              }`}
+            >
+              Blog
+            </Link>
+            <Link
+              to="/team"
+              className={`block px-3 py-2 hover:text-blue-600 ${
+                isActive('/team') ? 'text-blue-600 font-bold' : 'text-gray-600'
+              }`}
+            >
+              Team
+            </Link>
+            <Link
+              to="/contact"
+              className={`block px-3 py-2 hover:text-blue-600 ${
+                isActive('/contact') ? 'text-blue-600 font-bold' : 'text-gray-600'
+              }`}
+            >
+              Contact
+            </Link>
             <div className="px-3 py-2">
               <AuthButton />
             </div>
