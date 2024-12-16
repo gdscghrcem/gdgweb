@@ -51,12 +51,12 @@ const Navbar = () => {
               Events
             </Link>
             <Link
-              to="/blog"
+              to="/gallery"
               className={`hover:text-blue-600 ${
-                isActive('/blog') ? 'text-blue-600 font-bold' : 'text-gray-600'
+                isActive('/gallery') ? 'text-blue-600 font-bold' : 'text-gray-600'
               }`}
             >
-              Blog
+              Gallery
             </Link>
             <Link
               to="/team"
@@ -121,12 +121,12 @@ const Navbar = () => {
               Events
             </Link>
             <Link
-              to="/blog"
+              to="/gallery"
               className={`block px-3 py-2 hover:text-blue-600 ${
-                isActive('/blog') ? 'text-blue-600 font-bold' : 'text-gray-600'
+                isActive('/gallery') ? 'text-blue-600 font-bold' : 'text-gray-600'
               }`}
             >
-              Blog
+              Gallery
             </Link>
             <Link
               to="/team"
