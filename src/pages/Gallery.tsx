@@ -1,7 +1,7 @@
 import React from 'react';
 import { Clock, User } from 'lucide-react';
 
-const Blog = () => {
+const Gallery = () => {
   const posts = [
     {
       id: 1,
@@ -33,7 +33,7 @@ const Blog = () => {
     <div className="pt-16">
       <section className="bg-blue-600 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
-          <h1 className="text-4xl font-bold mb-6">Blog</h1>
+          <h1 className="text-4xl font-bold mb-6">Gallery</h1>
           <p className="text-xl">Stay updated with the latest in technology and development</p>
         </div>
       </section>
@@ -74,4 +74,4 @@ const Blog = () => {
   );
 };
 
-export default Blog;
+export default Gallery;

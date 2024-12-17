@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Code2 } from 'lucide-react';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => setIsOpen(!isOpen);
+
+  const isActive = (path: string) => location.pathname === path;
 
   return (
     <nav className="bg-white shadow-[2px_8px_15px_rgba(255,255,255,0.7)] fixed top-4 left-1/2 transform -translate-x-1/2 w-[90%] z-50 rounded-3xl border border-black ">
@@ -129,3 +131,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
