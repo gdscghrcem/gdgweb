@@ -7,52 +7,52 @@ const Home = () => {
   return (
     <div className="pt-16">
       {/* Hero Section */}
-      <section className="relative h-[600px] flex items-center">
+      <section className=" h-[500px] flex items-center">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80"
+            src="\src\assets\homebg.JPG"
             alt="Developer Conference"
-            className="w-full h-full object-cover"
+            className="object-cover w-full h-full"
           />
           <div className="absolute inset-0 bg-black opacity-60"></div>
         </div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
+        <div className="relative z-10 px-4 mx-auto text-white max-w-7xl sm:px-6 lg:px-8">
           <h1 className="hero-title">Google Developer Groups</h1>
-          <p className="subtitle text-xl mb-8 max-w-2xl">Connect, learn, and grow with a global community of developers. Join us in building the future of technology.</p>
+          <p className="max-w-2xl mb-8 text-xl subtitle">Connect, learn, and grow with a global community of developers. Join us in building the future of technology.</p>
           <Link 
             to="/events" 
-            className="animated-button inline-flex items-center bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700"
+            className="inline-flex items-center px-6 py-3 text-white bg-blue-600 rounded-md animated-button hover:bg-blue-700"
           >
             Upcoming Events
-            <ArrowRight className="ml-2 h-5 w-5 animate-float" />
+            <ArrowRight className="w-5 h-5 ml-2 animate-float" />
           </Link>
         </div>
       </section>
 
       {/* Features Section */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-3 gap-12 stagger-animate">
+        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <div className="grid gap-12 md:grid-cols-3 stagger-animate">
             <AnimatedCard delay={0.1}>
-              <div className="text-center p-6">
-                <Calendar className="h-12 w-12 text-blue-600 mx-auto mb-4 animate-float" />
-                <h3 className="text-xl font-semibold mb-2">Regular Events</h3>
+              <div className="p-6 text-center">
+                <Calendar className="w-12 h-12 mx-auto mb-4 text-blue-600 animate-float" />
+                <h3 className="mb-2 text-xl font-semibold">Regular Events</h3>
                 <p className="text-gray-600">Workshops, hackathons, and tech talks to keep you updated with the latest technologies.</p>
               </div>
             </AnimatedCard>
             
             <AnimatedCard delay={0.2}>
-              <div className="text-center p-6">
-                <Users className="h-12 w-12 text-blue-600 mx-auto mb-4 animate-float" />
-                <h3 className="text-xl font-semibold mb-2">Community</h3>
+              <div className="p-6 text-center">
+                <Users className="w-12 h-12 mx-auto mb-4 text-blue-600 animate-float" />
+                <h3 className="mb-2 text-xl font-semibold">Community</h3>
                 <p className="text-gray-600">Join a diverse community of developers, designers, and tech enthusiasts.</p>
               </div>
             </AnimatedCard>
             
             <AnimatedCard delay={0.3}>
-              <div className="text-center p-6">
-                <Globe2 className="h-12 w-12 text-blue-600 mx-auto mb-4 animate-float" />
-                <h3 className="text-xl font-semibold mb-2">Global Network</h3>
+              <div className="p-6 text-center">
+                <Globe2 className="w-12 h-12 mx-auto mb-4 text-blue-600 animate-float" />
+                <h3 className="mb-2 text-xl font-semibold">Global Network</h3>
                 <p className="text-gray-600">Connect with developers from around the world and expand your network.</p>
               </div>
             </AnimatedCard>
@@ -61,13 +61,13 @@ const Home = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-blue-600 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-fade-in">
-          <h2 className="text-3xl font-bold text-white mb-6">Ready to Join Our Community?</h2>
-          <p className="text-white text-lg mb-8">Get involved in our upcoming events and connect with fellow developers.</p>
+      <section className="py-20 bg-blue-600">
+        <div className="px-4 mx-auto text-center max-w-7xl sm:px-6 lg:px-8 animate-fade-in">
+          <h2 className="mb-6 text-3xl font-bold text-white">Ready to Join Our Community?</h2>
+          <p className="mb-8 text-lg text-white">Get involved in our upcoming events and connect with fellow developers.</p>
           <Link 
-            to="/contact" 
-            className="animated-button inline-block bg-white text-blue-600 px-8 py-3 rounded-md hover:bg-gray-100"
+            to="https://gdg.community.dev/gdg-on-campus-g-h-raisoni-college-of-engineering-and-management-pune-india/" 
+            className="inline-block px-8 py-3 text-blue-600 bg-white rounded-md animated-button hover:bg-gray-100"
           >
             Get Started
           </Link>

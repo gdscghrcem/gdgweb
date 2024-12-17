@@ -6,7 +6,6 @@ import About from './pages/About';
 import Events from './pages/Events';
 import Blog from './pages/Blog';
 import Team from './pages/Team';
-import Contact from './pages/Contact';
 import Login from './pages/Login';
 
 function App() {
@@ -20,7 +19,6 @@ function App() {
           <Route path="/events" element={<Events />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/team" element={<Team />} />
-          <Route path="/contact" element={<Contact />} />
           <Route path="/login" element={<Login />} />
         </Routes>
       </div>
