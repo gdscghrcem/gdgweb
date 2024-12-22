@@ -1,4 +1,3 @@
-import React from 'react';
 import { ArrowRight, Calendar, Users, Globe2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { AnimatedCard } from '../components/AnimatedCard';
@@ -70,11 +69,11 @@ const Home = () => {
       
       <section className="py-5 bg-gray-50">
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-        <div class="flex items-center justify-center gap-6">
-           <img src="\src\assets\logo2.png" alt="Logo" class="w-45 h-auto" />
-          <div class="max-w-lg text-left">
-           <h2 class="mb-4 text-3xl font-bold">Our Story</h2>
-           <p class="max-w-3xl mx-auto text-gray-600">
+        <div className="flex items-center justify-center gap-6">
+           <img src="\src\assets\logo2.png" alt="Logo" className="h-auto w-45" />
+          <div className="max-w-lg text-left">
+           <h2 className="mb-4 text-3xl font-bold">Our Story</h2>
+           <p className="max-w-3xl mx-auto text-gray-600">
               Started in 2022, Google Developer Groups on Campus (GDGoC) are 
              community-led developer groups that create opportunities for developers 
              to meet and learn about Google technologies and development platforms.
