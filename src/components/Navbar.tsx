@@ -16,7 +16,7 @@ const Navbar = () => {
         <div className="flex items-center">
           <Link to="/" className="flex items-center space-x-2">
           <img 
-            src="\src\assets\logogdg.jpg" 
+            src="\src\assets\logogdg.png" 
             alt="GDG Logo" 
             className="object-contain h-10 w-35"
           />
