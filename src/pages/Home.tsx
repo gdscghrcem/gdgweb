@@ -1,10 +1,10 @@
-import React from 'react';
 import { ArrowRight, Calendar, Users, Globe2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { AnimatedCard } from '../components/AnimatedCard';
 
 const Home = () => {
   return (
+    <div>
     <div className="pt-16">
       {/* Hero Section */}
       <section className=" h-[500px] flex items-center">
@@ -24,7 +24,7 @@ const Home = () => {
             className="inline-flex items-center px-6 py-3 text-white bg-blue-600 rounded-md animated-button hover:bg-blue-700"
           >
             Upcoming Events
-            <ArrowRight className="w-5 h-5 ml-2 animate-float" />
+            <ArrowRight />
           </Link>
         </div>
       </section>
@@ -59,6 +59,36 @@ const Home = () => {
           </div>
         </div>
       </section>
+      <section className="py-20 bg-blue-600">
+        <div className="px-4 mx-auto text-center text-white max-w-7xl sm:px-6 lg:px-8">
+          <h1 className="mb-6 text-4xl font-bold">About Google Developer Groups</h1>
+          <p className="max-w-3xl mx-auto text-xl">We are a community of developers passionate about Google technologies and dedicated to learning, sharing, and building together.</p>
+        </div> 
+      </section>
+      
+      
+      <section className="py-5 bg-gray-50">
+        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+        <div className="flex items-center justify-center gap-6">
+           <img src="\src\assets\logo2.png" alt="Logo" className="h-auto w-45" />
+          <div className="max-w-lg text-left">
+           <h2 className="mb-4 text-3xl font-bold">Our Story</h2>
+           <p className="max-w-3xl mx-auto text-gray-600">
+              Started in 2022, Google Developer Groups on Campus (GDGoC) are 
+             community-led developer groups that create opportunities for developers 
+             to meet and learn about Google technologies and development platforms.
+           </p>
+           </div>
+           </div>
+          <div className="aspect-w-16 aspect-h-9">
+            <img
+              src="\src\assets\team.JPG"
+              alt="Team Collaboration"
+              className="rounded-lg shadow-lg w-full h-[550px] object-cover"
+            />
+          </div>
+        </div>
+      </section>
 
       {/* CTA Section */}
       <section className="py-20 bg-blue-600">
@@ -73,6 +103,7 @@ const Home = () => {
           </Link>
         </div>
       </section>
+    </div>
     </div>
   );
 };

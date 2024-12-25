@@ -1,4 +1,3 @@
-import React from 'react';
 import { Target, Heart, Lightbulb } from 'lucide-react';
 
 const About = () => {
@@ -44,9 +43,9 @@ const About = () => {
           </div>
           <div className="aspect-w-16 aspect-h-9">
             <img
-              src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&q=80"
+              src="\src\assets\team.JPG"
               alt="Team Collaboration"
-              className="rounded-lg shadow-lg w-full h-[400px] object-cover"
+              className="rounded-lg shadow-lg w-full h-[550px] object-cover"
             />
           </div>
         </div>
