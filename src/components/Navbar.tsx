@@ -44,7 +44,7 @@ const Navbar = () => {
             Events
           </Link>
           <Link
-            to="/blog"
+            to="/gallery"
             className="px-4 py-2 transition-all duration-300 rounded-full hover:bg-black hover:text-white hover:rounded-full"
           >
             Gallery
@@ -97,7 +97,7 @@ const Navbar = () => {
           Events
         </Link>
         <Link
-          to="/blog"
+          to="/gallery"
             className="block px-3 py-2 rounded-md hover:bg-black hover:text-white"
         >
           Gallery

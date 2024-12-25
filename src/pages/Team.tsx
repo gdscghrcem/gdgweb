@@ -1,105 +1,20 @@
-'use client'
 
 import React, { useState } from 'react'
 import { Github, Linkedin, Mail, Code, Megaphone, Palette, Calendar, PenTool, DollarSign, Users } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
-
-type TeamMember = {
-  id: number;
-  name: string;
-  role: string;
-  image: string;
-  bio: string;
-};
-
-type Teams = {
-  [key: string]: TeamMember[];
-};
+import { teams, Teams, TeamMember } from '../lib/team-data'
 
 const Team: React.FC = () => {
-  const teams: Teams = {
-    'Core': [
-      {
-        id: 1,
-        name: "John Smith",
-        role: "Community Lead",
-        image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80",
-        bio: "Passionate about building communities and fostering innovation."
-      },
-      {
-        id: 2,
-        name: "Emily Chen",
-        role: "Operations Manager",
-        image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80",
-        bio: "Ensuring smooth operations and strategic planning for GDG."
-      },
-    ],
-    'Tech': [
-      {
-        id: 3,
-        name: "Alex Johnson",
-        role: "Tech Lead",
-        image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80",
-        bio: "Full-stack developer with expertise in cloud technologies and AI."
-      },
-    ],
-    'Public Relation': [
-      {
-        id: 4,
-        name: "Sarah Wilson",
-        role: "PR Manager",
-        image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80",
-        bio: "Managing public relations and community outreach for GDG."
-      },
-    ],
-    'Design': [
-      {
-        id: 5,
-        name: "Michael Lee",
-        role: "UI/UX Designer",
-        image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80",
-        bio: "Creating beautiful and intuitive designs for GDG projects."
-      },
-    ],
-    'Event': [
-      {
-        id: 6,
-        name: "David Kumar",
-        role: "Event Coordinator",
-        image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80",
-        bio: "Organizing tech events and workshops for the community."
-      },
-    ],
-    'Content': [
-      {
-        id: 7,
-        name: "Lisa Zhang",
-        role: "Content Lead",
-        image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80",
-        bio: "Creating engaging content and managing social media presence."
-      },
-    ],
-    'Finance': [
-      {
-        id: 8,
-        name: "Robert Tan",
-        role: "Finance Manager",
-        image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80",
-        bio: "Managing budgets and financial planning for GDG initiatives."
-      },
-    ],
-  }
-
   const [activeTeam, setActiveTeam] = useState<keyof Teams>('Core');
 
   const teamIcons: { [key in keyof Teams]: JSX.Element } = {
     'Core': <Users className="w-6 h-6" />,
     'Tech': <Code className="w-6 h-6" />,
-    'Public Relation': <Megaphone className="w-6 h-6" />,
     'Design': <Palette className="w-6 h-6" />,
-    'Event': <Calendar className="w-6 h-6" />,
-    'Content': <PenTool className="w-6 h-6" />,
     'Finance': <DollarSign className="w-6 h-6" />,
+    'Public Relations': <Megaphone className="w-6 h-6" />,
+    'Event Management': <Calendar className="w-6 h-6" />,
+    'Content': <PenTool className="w-6 h-6" />,
   }
 
   return (
@@ -160,7 +75,7 @@ const Team: React.FC = () => {
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.5 }}
             >
-              {teams[activeTeam].map((member, index) => (
+              {teams[activeTeam].map((member: TeamMember, index: number) => (
                 <motion.div
                   key={member.id}
                   className="bg-white rounded-xl shadow-xl overflow-hidden transform hover:scale-105 transition-all duration-300"
@@ -183,13 +98,15 @@ const Team: React.FC = () => {
                   <div className="p-6">
                     <p className="text-gray-600 mb-4">{member.bio}</p>
                     <div className="flex space-x-4">
-                      <a href="#" className="text-gray-600 hover:text-blue-600 transition-colors duration-200">
-                        <Github className="h-5 w-5" />
-                      </a>
-                      <a href="#" className="text-gray-600 hover:text-blue-600 transition-colors duration-200">
+                      {member.github && (
+                        <a href={member.github} target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-600 transition-colors duration-200">
+                          <Github className="h-5 w-5" />
+                        </a>
+                      )}
+                      <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-600 transition-colors duration-200">
                         <Linkedin className="h-5 w-5" />
                       </a>
-                      <a href="#" className="text-gray-600 hover:text-blue-600 transition-colors duration-200">
+                      <a href={`mailto:${member.mail}`} className="text-gray-600 hover:text-blue-600 transition-colors duration-200">
                         <Mail className="h-5 w-5" />
                       </a>
                     </div>

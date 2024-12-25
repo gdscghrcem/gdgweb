@@ -1,6 +1,4 @@
-'use client'
-
-import { useState } from 'react'
+import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { GallerySection as GallerySectionType, gallerySections } from '../lib/gallary-data'
 import GalleryModal from '../components/Gallery-model'
