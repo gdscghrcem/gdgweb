@@ -1,3 +1,4 @@
+import devyaniImage from '../assets/GDG MEMBERS/Devyani_Chavan.jpeg'
 import sakshamImage from '../assets/GDG MEMBERS/Saksham_Sharma.jpg';
 import sumeetImage from '../assets/GDG MEMBERS/Sumeet_Gond.png';
 import prernaImage from '../assets/GDG MEMBERS/Prerna_Agrawal.jpeg'
@@ -6,6 +7,12 @@ import adityaImage from '../assets/GDG MEMBERS/Aditya_Chavan.jpg'
 import mayankImage from '../assets/GDG MEMBERS/Mayank_Saraswat.jpg'
 import riteshImage from '../assets/GDG MEMBERS/Ritesh_Devkate.jpg'
 import shravaniImage from '../assets/GDG MEMBERS/Shravani_Bhalerao.png'
+import ayushImage from '../assets/GDG MEMBERS/Ayush_Yadav.jpg'
+import saishImage from '../assets/GDG MEMBERS/Saish_Mungase.jpg'
+import tanmayImage from '../assets/GDG MEMBERS/tanmay_pagare.jpg'
+import riteshPatilImage from '../assets/GDG MEMBERS/Ritesh_Patil.jpg'
+import sanikaImage from '../assets/GDG MEMBERS/Sanika_Baviskar.png'
+import pruthviImage from '../assets/GDG MEMBERS/Pruthviraj Chavan.jpg'
 
 export type TeamMember = {
   id: number;
@@ -28,7 +35,7 @@ export const teams: Teams = {
       id: 1,
       name: "Devyani Chavan",
       role: "GDG Lead",
-      image: "https://picsum.photos/400?random=101",
+      image: devyaniImage,
       bio: "Devyani is a passionate technologist who loves working with LLMs to solve real-world problems. As a GDG on Campus Organizer and Microsoft Learn Ambassador, she has been instrumental in building a community driven by innovation, collaboration, and growth.",
       linkedin: "https://www.linkedin.com/in/devyani-chavan",
       mail: "devyanichavan110@gmail.com"
@@ -37,7 +44,7 @@ export const teams: Teams = {
       id: 2,
       name: "Ayush Yadav",
       role: "Tech Lead",
-      image: "https://picsum.photos/400?random=1",
+      image: ayushImage,
       bio: "Ayush is a full-stack web developer with expertise in AI and API integration. A multiple hackathon winner, he leads with innovation as the Tech Lead at GDG",
       linkedin: "https://www.linkedin.com/in/ayushyadav27",
       github: "https://github.com/ayuxy027",
@@ -56,7 +63,7 @@ export const teams: Teams = {
       id: 4,
       name: "Ritesh Patil",
       role: "Finance Lead",
-      image: "https://picsum.photos/400?random=3",
+      image: riteshPatilImage,
       bio: "Ritesh is a dedicated and hardworking individual, serving as the Finance Lead at GDG. With a strong technical background, he blends finance expertise with technical skills to contribute to the success of the team.",
       linkedin: "https://www.linkedin.com/in/ritesh-patil-303b12256",
       mail : "5riteshrp@gmail.com"
@@ -94,7 +101,7 @@ export const teams: Teams = {
       id: 8,
       name: "Ayush Yadav",
       role: "Tech Lead",
-      image: "https://picsum.photos/400?random=7",
+      image: ayushImage,
       bio: "Ayush is a full-stack web developer with expertise in AI and API integration. A multiple hackathon winner, he leads with innovation as the Tech Lead at GDG",
       linkedin: "https://www.linkedin.com/in/ayushyadav27",
       github: "https://github.com/ayuxy027",
@@ -104,7 +111,7 @@ export const teams: Teams = {
       id: 9,
       name: "Saish Mungase",
       role: "Tech Member",
-      image: "https://picsum.photos/400?random=9",
+      image: saishImage,
       bio: "Saish is a problem-solving full-stack developer specializing in creating innovative AI applications that deliver seamless and impactful user experiences.",
       linkedin: "http://www.linkedin.com/in/saish-mungase",
       github: "https://github.com/saishmungase",
@@ -144,7 +151,7 @@ export const teams: Teams = {
       id: 13,
       name: "Sanika Bavaskar",
       role: "Design Member",
-      image: "https://picsum.photos/400?random=12",
+      image: sanikaImage,
       bio: "Sanika is a young and skilled designer, known for her creativity and ability to bring fresh, innovative ideas to life.",
       linkedin: "https://www.linkedin.com/in/sanika-bavaskar-473810325",
       mail: "sanika222kar@gmail.com"
@@ -155,7 +162,7 @@ export const teams: Teams = {
       id: 14,
       name: "Ritesh Patil",
       role: "Finance Lead",
-      image: "https://picsum.photos/400?random=13",
+      image: riteshPatilImage,
       bio: "Ritesh is a dedicated and hardworking individual, serving as the Finance Lead at GDG. With a strong technical background, he blends finance expertise with technical skills to contribute to the success of the team.",
       linkedin: "https://www.linkedin.com/in/ritesh-patil-303b12256",
       mail : "5riteshrp@gmail.com"
@@ -164,7 +171,7 @@ export const teams: Teams = {
       id: 15,
       name: "Pruthviraj Santosh Chavan",
       role: "Finance Member",
-      image: "https://picsum.photos/400?random=14",
+      image: pruthviImage,
       bio: "Pruthviraj is a highly experienced finance team member whose dedication and commitment are unmatched. His disciplined and focused approach reflects the qualities of a true professional, much like an army officer.",
       linkedin: "http://in.linkedin.com/in/pruthviraj-chavan-873736308",
       mail : "pruthvirajchavan2905@gmail.com"
@@ -193,7 +200,7 @@ export const teams: Teams = {
       id: 18,
       name: "Tanmay Pagare",
       role: "Public Relations Member",
-      image: "https://picsum.photos/400?random=17",
+      image: tanmayImage,
       bio: "Tanmay is a dynamic PR member with a knack for communication and building strong community connections. His passion for esports and engaging personality allows him to effectively connect with diverse audiences and create memorable interactions.",
       linkedin: "https://www.linkedin.com/in/tanmay-pagare-956a45297",
       mail : "tanmay8business@gmail.com"
