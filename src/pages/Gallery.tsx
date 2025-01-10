@@ -10,9 +10,14 @@ export default function Gallery() {
   const [selectedSection, setSelectedSection] = useState<GallerySectionType | null>(null)
 
   return (
-    <div className="container px-4 py-12 mx-auto my-12">
-      <h2 className="mb-8 text-3xl font-bold text-center">GDG Event Gallery</h2>
-      <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+    <div className="pt-16">
+      <section className="py-20 bg-blue-600">
+        <div className="px-4 mx-auto text-center text-white max-w-7xl sm:px-6 lg:px-8">
+          <h1 className="mb-6 text-4xl font-bold">Gallery</h1>
+          <p className="max-w-3xl mx-auto text-xl">A glimpse into our events and community moments, highlighting the energy and collaboration around Google technologies.</p>
+        </div>
+      </section>
+      <div className="grid px-6 py-20 grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
         {gallerySections.map((section) => (
           <GallerySection
             key={section.id}

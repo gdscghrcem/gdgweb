@@ -17,11 +17,11 @@ const Team: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
+    <div className="min-h-screen pt-16 bg-gradient-to-br from-gray-50 to-gray-100">
       <section className="py-20 text-white bg-gradient-to-r from-blue-600 to-indigo-600">
         <div className="px-4 mx-auto text-center max-w-7xl sm:px-6 lg:px-8">
           <motion.h1
-            className="mb-6 text-5xl font-bold"
+            className="mb-6 text-4xl font-bold"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
@@ -86,7 +86,7 @@ const Team: React.FC = () => {
                     <img
                       src={member.image}
                       alt={member.name}
-                      className="object-cover w-full h-64"
+                      className="object-cover w-full h-64 hover:scale-90 transition-transform duration-500"
                     />
                     <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-black to-transparent"></div>
                     <div className="absolute text-white bottom-4 left-4">

@@ -13,6 +13,9 @@ import tanmayImage from '../assets/GDG MEMBERS/tanmay_pagare.jpg'
 import riteshPatilImage from '../assets/GDG MEMBERS/Ritesh_Patil.jpg'
 import sanikaImage from '../assets/GDG MEMBERS/Sanika_Baviskar.png'
 import pruthviImage from '../assets/GDG MEMBERS/Pruthviraj Chavan.jpg'
+import santoshImage from '../assets/GDG MEMBERS/Santosh_Singh.jpg'
+import shreyanshImage from '../assets/GDG MEMBERS/Shreyash_Jadhav.jpg'
+import sujeetImage from '../assets/GDG MEMBERS/Sujeet_Yadav.jpg'
 
 export type TeamMember = {
   id: number;
@@ -36,7 +39,7 @@ export const teams: Teams = {
       name: "Devyani Chavan",
       role: "GDG Lead",
       image: devyaniImage,
-      bio: "Devyani is a passionate technologist who loves working with LLMs to solve real-world problems. As a GDG on Campus Organizer and Microsoft Learn Ambassador, she has been instrumental in building a community driven by innovation, collaboration, and growth.",
+      bio: "Devyani is a GDG Organizer and Microsoft Learn Ambassador, passionate about using LLMs to solve real-world problems.",
       linkedin: "https://www.linkedin.com/in/devyani-chavan",
       mail: "devyanichavan110@gmail.com"
     },
@@ -45,7 +48,7 @@ export const teams: Teams = {
       name: "Ayush Yadav",
       role: "Tech Lead",
       image: ayushImage,
-      bio: "Ayush is a full-stack web developer with expertise in AI and API integration. A multiple hackathon winner, he leads with innovation as the Tech Lead at GDG",
+      bio: "Ayush is a full-stack developer and hackathon winner, excelling in AI and API integrations as GDG's Tech Lead.",
       linkedin: "https://www.linkedin.com/in/ayushyadav27",
       github: "https://github.com/ayuxy027",
       mail: "ayush421301@gmail.com"
@@ -55,7 +58,7 @@ export const teams: Teams = {
       name: "Shravani Bhalerao",
       role: "Design Lead",
       image: shravaniImage,
-      bio: "Shravani is a talented design lead at GDG with strong design experience and creativity, bringing innovative and visually appealing solutions to every project.",
+      bio: "Shravani is GDG's Design Lead, delivering innovative and visually appealing solutions with her creativity.",
       linkedin: "https://www.linkedin.com/in/shravani-bhalerao-8b45b5293",
       mail: "sb.natalya04@gmail.com"
     },
@@ -64,7 +67,7 @@ export const teams: Teams = {
       name: "Ritesh Patil",
       role: "Finance Lead",
       image: riteshPatilImage,
-      bio: "Ritesh is a dedicated and hardworking individual, serving as the Finance Lead at GDG. With a strong technical background, he blends finance expertise with technical skills to contribute to the success of the team.",
+      bio: "Ritesh is GDG's Finance Lead, combining technical skills with finance expertise to drive success.",
       linkedin: "https://www.linkedin.com/in/ritesh-patil-303b12256",
       mail : "5riteshrp@gmail.com"
     },
@@ -73,7 +76,7 @@ export const teams: Teams = {
       name: "Saksham Sharma",
       role: "Public Relations Lead",
       image: sakshamImage,
-      bio: "Saksham is GDG's Public Relations Lead and an extroverted personality known for his exceptional communication skills. His ability to connect with people and captivate large audiences through his shows, Shayari, and storytelling makes him a standout figure.",
+      bio: "Saksham, GDG's PR Lead, is known for his communication skills, captivating audiences through shows and storytelling.",
       linkedin: "http://www.linkedin.com/in/capable-sharma",
       mail : "sakshams1983@gmail.com"
     },
@@ -82,7 +85,7 @@ export const teams: Teams = {
       name: "Raj Gupta",
       role: "Event Lead",
       image: rajImage,
-      bio: "Raj is an experienced Event Management Lead with a diverse skill set spanning video editing, Management, and entrepreneurship. His leadership and creativity shine through in every event and project he manages.",
+      bio: "Raj is GDG's Event Lead, skilled in video editing and management, excelling in creative event planning.",
       linkedin: "https://in.linkedin.com/in/-the-raj-gupta",
       mail : "theRajGuptapro@gmail.com"
     },
@@ -90,8 +93,8 @@ export const teams: Teams = {
       id: 7,
       name: "Santosh Singh",
       role: "Content Lead",
-      image: "https://picsum.photos/400?random=6",
-      bio: "Santosh, as the Content Lead, combines his photography and video skills to create captivating content for GDG. His creative eye and expertise in social media content drive engagement and visibility.",
+      image: santoshImage,
+      bio: "Santosh is GDG's Content Lead, creating engaging content with his expertise in photography and social media.",
       linkedin: "https://www.linkedin.com/in/santosh-singh-26415828a",
       mail : "iamsingh.santosh@gmail.com"
     }
@@ -102,7 +105,7 @@ export const teams: Teams = {
       name: "Ayush Yadav",
       role: "Tech Lead",
       image: ayushImage,
-      bio: "Ayush is a full-stack web developer with expertise in AI and API integration. A multiple hackathon winner, he leads with innovation as the Tech Lead at GDG",
+      bio: "Ayush is a full-stack developer and hackathon winner, excelling in AI and API integrations as GDG's Tech Lead.",
       linkedin: "https://www.linkedin.com/in/ayushyadav27",
       github: "https://github.com/ayuxy027",
       mail: "ayush421301@gmail.com"
@@ -112,7 +115,7 @@ export const teams: Teams = {
       name: "Saish Mungase",
       role: "Tech Member",
       image: saishImage,
-      bio: "Saish is a problem-solving full-stack developer specializing in creating innovative AI applications that deliver seamless and impactful user experiences.",
+      bio: "Saish is a full-stack developer specializing in AI applications that deliver impactful user experiences.",
       linkedin: "http://www.linkedin.com/in/saish-mungase",
       github: "https://github.com/saishmungase",
       mail: "saishmungase@gmail.com"
@@ -121,8 +124,8 @@ export const teams: Teams = {
       id: 10,
       name: "Sujeet Yadav",
       role: "Tech Member",
-      image: "https://picsum.photos/400?random=8",
-      bio: "Sujeet is a skilled developer with excellent website design and clean coding abilities, creating seamless and visually appealing web experiences.",
+      image: sujeetImage,
+      bio: "Sujeet is a skilled developer, crafting clean and visually appealing website designs.",
       linkedin: "https://www.linkedin.com/in/sujeet-yadav0070",
       github: "https://github.com/codesujeet",
       mail: "ysujeet0070@gmail.com"
@@ -134,7 +137,7 @@ export const teams: Teams = {
       name: "Shravani Bhalerao",
       role: "Design Lead",
       image: shravaniImage,
-      bio: "Shravani is a talented design lead at GDG with strong design experience and creativity, bringing innovative and visually appealing solutions to every project.",
+      bio: "Shravani is GDG's Design Lead, delivering innovative and visually appealing solutions with her creativity.",
       linkedin: "https://www.linkedin.com/in/shravani-bhalerao-8b45b5293",
       mail: "sb.natalya04@gmail.com"
     },
@@ -143,7 +146,7 @@ export const teams: Teams = {
       name: "Mayank Saraswat",
       role: "Design Member",
       image: mayankImage,
-      bio: "Mayank is a young designer with exceptional skills, consistently delivering impressive and creative design solutions.",
+      bio: "Mayank is a talented designer, consistently delivering creative and impressive design solutions.",
       linkedin: "https://www.linkedin.com/in/mayank-saraswat-a08401252",
       mail: "saraswatmayank336@gmail.com"
     },
@@ -152,7 +155,7 @@ export const teams: Teams = {
       name: "Sanika Bavaskar",
       role: "Design Member",
       image: sanikaImage,
-      bio: "Sanika is a young and skilled designer, known for her creativity and ability to bring fresh, innovative ideas to life.",
+      bio: "Sanika is a creative designer, bringing fresh and innovative ideas to every project.",
       linkedin: "https://www.linkedin.com/in/sanika-bavaskar-473810325",
       mail: "sanika222kar@gmail.com"
     }
@@ -163,7 +166,7 @@ export const teams: Teams = {
       name: "Ritesh Patil",
       role: "Finance Lead",
       image: riteshPatilImage,
-      bio: "Ritesh is a dedicated and hardworking individual, serving as the Finance Lead at GDG. With a strong technical background, he blends finance expertise with technical skills to contribute to the success of the team.",
+      bio: "Ritesh is GDG's Finance Lead, combining technical skills with finance expertise to drive success.",
       linkedin: "https://www.linkedin.com/in/ritesh-patil-303b12256",
       mail : "5riteshrp@gmail.com"
     },
@@ -172,7 +175,7 @@ export const teams: Teams = {
       name: "Pruthviraj Santosh Chavan",
       role: "Finance Member",
       image: pruthviImage,
-      bio: "Pruthviraj is a highly experienced finance team member whose dedication and commitment are unmatched. His disciplined and focused approach reflects the qualities of a true professional, much like an army officer.",
+      bio: "Pruthviraj is a disciplined and dedicated finance team member, ensuring focused contributions to GDG's success.",
       linkedin: "http://in.linkedin.com/in/pruthviraj-chavan-873736308",
       mail : "pruthvirajchavan2905@gmail.com"
     }
@@ -183,7 +186,7 @@ export const teams: Teams = {
       name: "Saksham Sharma",
       role: "Public Relations Lead",
       image: sakshamImage,
-      bio: "Saksham is GDG's Public Relations Lead and an extroverted personality known for his exceptional communication skills. His ability to connect with people and captivate large audiences through his shows, Shayari, and storytelling makes him a standout figure.",
+      bio: "Saksham, GDG's PR Lead, is known for his communication skills, captivating audiences through shows and storytelling.",
       linkedin: "http://www.linkedin.com/in/capable-sharma",
       mail : "sakshams1983@gmail.com"
     },
@@ -192,7 +195,7 @@ export const teams: Teams = {
       name: "Ritesh Devkate",
       role: "Public Relations Member",
       image: riteshImage,
-      bio: "Ritech is a PR member with excellent communication skills and a natural confidence that helps him capture the attention of large audiences. His ability to engage and connect makes him an invaluable asset to the team.",
+      bio: "Ritech, a PR member, excels in communication and confidence, captivating large audiences with ease.",
       linkedin: "https://www.linkedin.com/in/ritesh-devkate-8b28222a3",
       mail : "rdevkate1920@gmail.com"
     },
@@ -201,7 +204,7 @@ export const teams: Teams = {
       name: "Tanmay Pagare",
       role: "Public Relations Member",
       image: tanmayImage,
-      bio: "Tanmay is a dynamic PR member with a knack for communication and building strong community connections. His passion for esports and engaging personality allows him to effectively connect with diverse audiences and create memorable interactions.",
+      bio: "Tanmay, a dynamic PR member, builds strong community ties and connects with diverse audiences effectively.",
       linkedin: "https://www.linkedin.com/in/tanmay-pagare-956a45297",
       mail : "tanmay8business@gmail.com"
     }
@@ -212,7 +215,7 @@ export const teams: Teams = {
       name: "Raj Gupta",
       role: "Event Lead",
       image: rajImage,
-      bio: "Raj is an experienced Event Management Lead with a diverse skill set spanning video editing, Management, and entrepreneurship. His leadership and creativity shine through in every event and project he manages.",
+      bio: "Raj is GDG's Event Lead, skilled in video editing and management, excelling in creative event planning.",
       linkedin: "https://in.linkedin.com/in/-the-raj-gupta",
       mail : "theRajGuptapro@gmail.com"
     },
@@ -220,8 +223,8 @@ export const teams: Teams = {
       id: 20,
       name: "Shreyash Jadhav",
       role: "Event Member",
-      image: "https://picsum.photos/400?random=19",
-      bio: "Shreyansh brings exceptional management skills to the Event Management team, ensuring smooth coordination and successful events. His attention to detail and organizational abilities are key to the team's success.",
+      image: shreyanshImage,
+      bio: "Shreyansh ensures smooth coordination and successful events with his exceptional organizational skills.",
       linkedin: "https://www.linkedin.com/in/shreyash-jadhav-42541b256",
       mail : "Shreyashjadhav3999@gmail.com"
     },
@@ -230,7 +233,7 @@ export const teams: Teams = {
       name: "Prerna Agrawal",
       role: "Event Member",
       image: prernaImage,
-      bio: "Prerna's impressive management skills, despite her youth, make her a valuable asset to the team. She excels in handling tasks efficiently and contributes to the overall success of every project she tackles.",
+      bio: "Prerna's impressive management skills make her a key contributor to the success of every project.",
       linkedin: "https://www.linkedin.com/in/prerana-agrawal-25102a331",
       mail : "preragram78987@gmail.com"
     }
@@ -240,8 +243,8 @@ export const teams: Teams = {
       id: 22,
       name: "Santosh Singh",
       role: "Content Lead",
-      image: "https://picsum.photos/400?random=21",
-      bio: "Santosh, as the Content Lead, combines his photography and video skills to create captivating content for GDG. His creative eye and expertise in social media content engagement and visibility.",
+      image: santoshImage,
+      bio: "Santosh is GDG's Content Lead, creating engaging content with his expertise in photography and social media.",
       linkedin: "https://www.linkedin.com/in/santosh-singh-26415828a",
       mail : "iamsingh.santosh@gmail.com"
     },
@@ -250,7 +253,7 @@ export const teams: Teams = {
       name: "Aditya Chavan",
       role: "Content Member",
       image: adityaImage,
-      bio: "Aditya is a skilled Content Member with an eye for photography and a flair for content creation. He plays a key role in producing engaging and visually appealing content for GDG's digital platforms.",
+      bio: "Aditya, a skilled Content Member, excels in photography and creates engaging digital content for GDG.",
       linkedin: "https://www.linkedin.com/in/aditya-chavan-714691257",
       mail : "email"
     },
@@ -259,7 +262,7 @@ export const teams: Teams = {
       name: "Sumeet Gond",
       role: "Content Member",
       image: sumeetImage,
-      bio: "Sumeet is a versatile Content Member, blending his coding skills with strong communication and UI abilities. His multifaceted expertise helps create high-quality, engaging content for GDG.",
+      bio: "Sumeet blends coding, communication, and UI skills to deliver high-quality content for GDG.",
       linkedin: "https://www.linkedin.com/in/sumeet-gond-22b7b5298",
       mail : "sumitv9009@gmail.com"
     }
