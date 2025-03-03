@@ -1,53 +1,109 @@
-import { Target, Heart, Lightbulb } from 'lucide-react';
+import { Target, Heart, Lightbulb } from "lucide-react";
+import { motion } from "framer-motion";
+import team from "../assets/webimg/team.jpg";
 
 const About = () => {
   return (
-    <div className="pt-16">
-      <section className="py-20 bg-blue-600">
-        <div className="px-4 mx-auto text-center text-white max-w-7xl sm:px-6 lg:px-8">
-          <h1 className="mb-6 text-4xl font-bold">About Google Developer Groups</h1>
-          <p className="max-w-3xl mx-auto text-xl">We are a community of developers passionate about Google technologies and dedicated to learning, sharing, and building together.</p>
+    <div className="pt-16 min-h-screen bg-gradient-to-b from-gray-50 to-blue-50">
+      {/* Hero Section */}
+      <section className="py-12 bg-gradient-to-r from-blue-600 to-blue-500 sm:py-16">
+        <div className="container px-4 mx-auto max-w-7xl text-center text-white">
+          <motion.h1
+            className="mb-3 text-3xl font-semibold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-white to-blue-100 sm:mb-4 sm:text-4xl md:text-5xl"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            About Google Developer Groups
+          </motion.h1>
+          <motion.p
+            className="text-lg font-medium text-blue-100 sm:text-xl md:text-2xl"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
+            We are a community of developers passionate about Google technologies.
+          </motion.p>
         </div>
       </section>
 
-      <section className="py-20">
-        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-          <div className="grid gap-12 md:grid-cols-3">
-            <div className="text-center">
-              <Target className="w-12 h-12 mx-auto mb-4 text-blue-600" />
-              <h3 className="mb-4 text-xl font-semibold">Our Mission</h3>
-              <p className="text-gray-600">To create an inclusive environment where developers can network, learn, and grow together.</p>
-            </div>
-            <div className="text-center">
-              <Heart className="w-12 h-12 mx-auto mb-4 text-blue-600" />
-              <h3 className="mb-4 text-xl font-semibold">Our Values</h3>
-              <p className="text-gray-600">Community, Innovation, Knowledge sharing, and Inclusivity are at the heart of everything we do.</p>
-            </div>
-            <div className="text-center">
-              <Lightbulb className="w-12 h-12 mx-auto mb-4 text-blue-600" />
-              <h3 className="mb-4 text-xl font-semibold">Our Vision</h3>
-              <p className="text-gray-600">To empower developers to build innovative solutions that make a positive impact on society.</p>
-            </div>
-          </div>
+      {/* Values Section */}
+      <section className="py-8 sm:py-12 md:py-16">
+        <div className="container px-4 mx-auto max-w-7xl">
+          <motion.div
+            className="grid grid-cols-1 gap-6 sm:gap-8 md:grid-cols-3"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+          >
+            {[
+              {
+                icon: <Target className="w-10 h-10 text-blue-500" />,
+                title: "Our Mission",
+                description: "To create an inclusive environment where developers can network, learn, and grow together."
+              },
+              {
+                icon: <Heart className="w-10 h-10 text-blue-500" />,
+                title: "Our Values",
+                description: "Community, Innovation, Knowledge sharing, and Inclusivity are at the heart of everything we do."
+              },
+              {
+                icon: <Lightbulb className="w-10 h-10 text-blue-500" />,
+                title: "Our Vision",
+                description: "To empower developers to build innovative solutions that make a positive impact on society."
+              }
+            ].map((item, index) => (
+              <motion.div
+                key={index}
+                className="p-6 text-center bg-white rounded-lg shadow-md transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg"
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3, delay: index * 0.1 + 0.5 }}
+              >
+                <div className="inline-flex justify-center items-center mb-4">
+                  {item.icon}
+                </div>
+                <h3 className="mb-2 text-lg font-semibold text-gray-800 sm:text-xl">
+                  {item.title}
+                </h3>
+                <p className="text-sm text-gray-600 sm:text-base">
+                  {item.description}
+                </p>
+              </motion.div>
+            ))}
+          </motion.div>
         </div>
       </section>
 
-      <section className="py-20 bg-gray-50">
-        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-          <div className="mb-12 text-center">
-            <h2 className="mb-4 text-3xl font-bold">Our Story</h2>
-            <p className="max-w-3xl mx-auto text-gray-600">
-            Started in 2022, Google Developer Groups on Campus (GDGoC) are community-led developer groups that create opportunities for developers to meet and learn about Google technologies and development platforms
-
+      {/* Story Section */}
+      <section className="py-8 bg-white sm:py-10 md:py-12">
+        <div className="container px-4 mx-auto max-w-7xl">
+          <motion.div
+            className="mb-8 text-center"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <h2 className="mb-4 text-xl font-bold text-gray-900 sm:text-2xl md:text-3xl">
+              Our Story
+            </h2>
+            <p className="mx-auto max-w-3xl text-sm leading-relaxed text-gray-600 sm:text-base md:text-lg">
+              Founded in 2022, Google Developer Groups on Campus (GDGoC) are community-led initiatives that bring developers together to learn, share, and build using Google technologies.
+              We aim to foster a supportive community where developers can grow and create meaningful projects that make a difference in the world.
             </p>
-          </div>
-          <div className="aspect-w-16 aspect-h-9">
+          </motion.div>
+          <motion.div
+            className="relative mt-8 overflow-hidden rounded-lg shadow-md aspect-[16/9]"
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
             <img
-              src="\src\assets\team.JPG"
+              src={team}
               alt="Team Collaboration"
-              className="rounded-lg shadow-lg w-full h-[550px] object-cover"
+              className="object-cover absolute inset-0 w-full h-full"
             />
-          </div>
+          </motion.div>
         </div>
       </section>
     </div>

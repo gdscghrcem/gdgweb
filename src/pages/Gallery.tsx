@@ -1,31 +1,62 @@
-'use client'
+"use client";
 
-import { useState } from 'react'
-import { motion } from 'framer-motion'
-import { GallerySection as GallerySectionType, gallerySections } from '../lib/gallary-data'
-import GalleryModal from '../components/Gallery-model'
-
+import { useState } from "react";
+import { motion } from "framer-motion";
+import {
+  GallerySection as GallerySectionType,
+  gallerySections,
+} from "../lib/gallary-data";
+import GalleryModal from "../components/Gallery-model";
 
 export default function Gallery() {
-  const [selectedSection, setSelectedSection] = useState<GallerySectionType | null>(null)
+  const [selectedSection, setSelectedSection] =
+    useState<GallerySectionType | null>(null);
 
   return (
-    <div className="pt-16">
-      <section className="py-20 bg-blue-600">
-        <div className="px-4 mx-auto text-center text-white max-w-7xl sm:px-6 lg:px-8">
-          <h1 className="mb-6 text-4xl font-bold">Gallery</h1>
-          <p className="max-w-3xl mx-auto text-xl">A glimpse into our events and community moments, highlighting the energy and collaboration around Google technologies.</p>
+    <div className="pt-16 min-h-screen bg-gradient-to-b from-gray-50 to-blue-50">
+      {/* Hero Section */}
+      <section className="py-12 bg-gradient-to-r from-blue-600 to-blue-500 sm:py-16">
+        <div className="container px-4 mx-auto max-w-7xl text-center text-white">
+          <motion.h1
+            className="mb-3 text-3xl font-semibold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-white to-blue-100 sm:mb-4 sm:text-4xl md:text-5xl"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            Our Gallery
+          </motion.h1>
+          <motion.p
+            className="text-lg font-medium text-blue-100 sm:text-xl md:text-2xl"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
+            A glimpse into our events and community moments.
+          </motion.p>
         </div>
       </section>
-      <div className="grid px-6 py-20 grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-        {gallerySections.map((section) => (
-          <GallerySection
-            key={section.id}
-            section={section}
-            onClick={() => setSelectedSection(section)}
-          />
-        ))}
-      </div>
+
+      {/* Gallery Grid */}
+      <section className="py-8 sm:py-12 md:py-16">
+        <div className="container px-4 mx-auto max-w-7xl">
+          <motion.div
+            className="grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+          >
+            {gallerySections.map((section) => (
+              <GallerySection
+                key={section.id}
+                section={section}
+                onClick={() => setSelectedSection(section)}
+              />
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Modal */}
       {selectedSection && (
         <GalleryModal
           section={selectedSection}
@@ -33,27 +64,39 @@ export default function Gallery() {
         />
       )}
     </div>
-  )
+  );
 }
 
-function GallerySection({ section, onClick }: { section: GallerySectionType; onClick: () => void }) {
+function GallerySection({
+  section,
+  onClick,
+}: {
+  section: GallerySectionType;
+  onClick: () => void;
+}) {
   return (
     <motion.div
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.95 }}
-      className="overflow-hidden bg-white rounded-lg shadow-lg cursor-pointer"
+      whileHover={{ scale: 1.02 }}
+      whileTap={{ scale: 0.98 }}
+      className="overflow-hidden bg-white rounded-lg shadow-lg transition-all duration-300 cursor-pointer group hover:shadow-xl"
       onClick={onClick}
     >
-      <img
-        src={section.coverImage}
-        alt={section.title}
-        className="object-cover w-full h-48"
-      />
-      <div className="p-4">
-        <h3 className="mb-2 text-xl font-semibold">{section.title}</h3>
-        <p className="text-gray-600">{section.description}</p>
+      <div className="relative aspect-[16/9] overflow-hidden">
+        <img
+          src={section.coverImage}
+          alt={section.title}
+          className="object-cover absolute inset-0 w-full h-full transition-transform duration-500 group-hover:scale-105"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t to-transparent opacity-0 transition-opacity duration-300 from-black/60 group-hover:opacity-100" />
+      </div>
+      <div className="p-6 sm:p-8">
+        <h3 className="mb-3 text-xl font-semibold text-gray-900 sm:text-2xl">
+          {section.title}
+        </h3>
+        <p className="text-base text-gray-600 sm:text-lg line-clamp-2">
+          {section.description}
+        </p>
       </div>
     </motion.div>
-  )
+  );
 }
-
